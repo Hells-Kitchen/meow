@@ -1,0 +1,17 @@
+name = "Meow - Core"
+prefix = "meow"
+author = "Hell's Kitchen Incorporated"
+mainprefix = "z"
+
+[version]
+git_hash = 0
+
+[properties]
+author = "Hell's Kitchen Incorporated"
+url = "https://discord.gg/Pu2gdBd7Te"
+
+[hemtt.build]
+binarize = true
+
+[hemtt.release]
+archive = true
