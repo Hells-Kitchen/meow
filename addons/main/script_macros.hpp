@@ -8,7 +8,7 @@
 #define GET_TEXT(config,default) (if (isText (config)) then {getText (config)} else {default})
 #define GET_ARRAY(config,default) (if (isArray (config)) then {getArray (config)} else {default})
 #define GET_BOOL(config) (GET_NUMBER(config,0) > 0)
-
+// yay
 #define MACRO_REPEAT_2(var1) var1,var1
 #define MACRO_REPEAT_3(var1) var1,var1,var1
 #define MACRO_REPEAT_4(var1) var1,var1,var1,var1
