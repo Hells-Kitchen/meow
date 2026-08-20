@@ -11,7 +11,7 @@ class CfgPatches {
             ITEM_LIST
         };
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"A3_Data_F_Decade_Loadorder", "ace_main"};
+        requiredAddons[] = {"A3_Data_F_Decade_Loadorder"};
         author = AUTHOR;
         authors[] = {""};
         url = CSTRING(URL);

@@ -1,10 +1,10 @@
 
 
 #define MAINPREFIX z
-#define PREFIX meow
+#define PREFIX agd
 
 #define AUTHOR QUOTE(Hell's Kitchen Incorporated)
-#define MOD_NAME_BEAUTIFIED QUOTE(Meow Core)
+#define MOD_NAME_BEAUTIFIED QUOTE(A Galaxy Divided 2)
 
 #include "script_version.hpp"
 
@@ -24,14 +24,14 @@
 
 #ifdef SUBCOMPONENT
     #ifdef SUBCOMPONENT_BEAUTIFIED
-        #define COMPONENT_NAME QUOTE(Meow Core - SUBCOMPONENT_BEAUTIFIED)
+        #define COMPONENT_NAME QUOTE(A Galaxy Divided 2 - SUBCOMPONENT_BEAUTIFIED)
     #else
-        #define COMPONENT_NAME QUOTE(Meow Core - SUBCOMPONENT)
+        #define COMPONENT_NAME QUOTE(A Galaxy Divided 2 - SUBCOMPONENT)
     #endif
 #else
     #ifdef COMPONENT_BEAUTIFIED
-        #define COMPONENT_NAME QUOTE(Meow Core - COMPONENT_BEAUTIFIED)
+        #define COMPONENT_NAME QUOTE(A Galaxy Divided 2 - COMPONENT_BEAUTIFIED)
     #else
-        #define COMPONENT_NAME QUOTE(Meow Core - COMPONENT)
+        #define COMPONENT_NAME QUOTE(A Galaxy Divided 2 - COMPONENT)
     #endif
 #endif

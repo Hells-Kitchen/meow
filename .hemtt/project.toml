@@ -1,5 +1,5 @@
-name = "Meow - Core"
-prefix = "meow"
+name = "A Galaxy Divided 2"
+prefix = "agd"
 author = "Hell's Kitchen Incorporated"
 mainprefix = "z"
 
@@ -15,3 +15,6 @@ binarize = true
 
 [hemtt.release]
 archive = true
+
+[preprocessor]
+runtime_macros = true
