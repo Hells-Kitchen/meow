@@ -86,8 +86,5 @@ _initialEquipment append (A3A_faction_civ get "uniforms");
 _initialEquipment append allCosmeticHeadgear;
 _initialEquipment append allCosmeticGlasses;
 
-diag_log format ["[TRACE] knd_mag_amban in lootMagazine BEFORE removeForbidden: %1", "knd_mag_amban" in lootMagazine];
-
 call A3U_fnc_removeForbiddenItems;
 
-diag_log format ["[TRACE] knd_mag_amban in lootMagazine AFTER removeForbidden: %1", "knd_mag_amban" in lootMagazine];

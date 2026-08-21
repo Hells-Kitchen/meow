@@ -2,7 +2,7 @@
     {
         requiredAddons[] = {};
         basepath = QPATHTOF(Templates);
-        logo = QPATHTOF(Templates\kndicon_ca.paa);
+        logo = "knd_markers\data\Ral.paa";
         priority = 100;
     };
 // -------------------- Occupiers ---------------------------------

@@ -35,8 +35,6 @@ private _allMagazineConfigs = "
     && { getText (_x >> 'picture') != '' }}
 " configClasses (configFile >> "CfgMagazines");
 
-diag_log format ["[CLASSIFY] knd_mag_amban in allMagazineConfigs: %1", (configFile >> "CfgMagazines" >> "knd_mag_amban") in _allMagazineConfigs];
-
 private _allBackpackConfigs = "
     getNumber ( _x >> 'scope' ) isEqualTo 2
     && { getText ( _x >> 'vehicleClass' ) isEqualTo 'Backpacks' }
@@ -57,23 +55,13 @@ private ["_nameX", "_item", "_itemMod", "_itemType", "_categories"];           /
 
     // If in disabledMods, remove. Don't need itemType for this so we do it first
     _itemMod = _x call A3A_fnc_getModOfConfigClass;
-    if (_nameX == "knd_mag_amban") then {
-        diag_log format ["[CLASSIFY] mod:%1 in disabledMods:%2", _itemMod, _itemMod in A3A_disabledMods];
-    };
     if (_itemMod in A3A_disabledMods) then { continue };
 
     // Filter items by current factions/modset
     _itemType = _nameX call A3A_fnc_itemType;
-    if (_nameX == "knd_mag_amban") then {
-        diag_log format ["[CLASSIFY] cn:%1 mod:%2 type:%3", _nameX, _itemMod, _itemType];
-        diag_log format ["[CLASSIFY] filter result: %1", [_x, _itemMod, _itemType] call _fnc_filter];
-    };
     if !([_x, _itemMod, _itemType] call _fnc_filter) then { continue };
 
     _categories = [_nameX, _itemType] call A3A_fnc_equipmentClassToCategories;
-    if (_nameX == "knd_mag_amban") then {
-        diag_log format ["[CATEGORIES] knd_mag_amban categories: %1", _categories];
-    };
     {
         (missionNamespace getVariable ("all" + _x)) pushBack _nameX;
     } forEach _categories;

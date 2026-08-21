@@ -133,7 +133,40 @@ private _initialRebelEquipment = [
     "knd_synthblood_500",
     "knd_voluminex",
     "knd_voluminex_250",
-    "knd_voluminex_500"
+    "knd_voluminex_500",
+    "knd_a3a_jockey",
+    "knd_a3a_jockey_alt",
+    "knd_a3a_jockey_navy",
+    "knd_a3a_jockey_navy_alt",
+    "JMSLLTE_OfheadPh_helmet",
+    "JMSLLTE_Ofcap_helmet",
+    "JMSLLTE_Ofcap_br_helmet",
+    "JMSLLTE_Ofcap_fl_helmet",
+    "H_Shemag_olive",
+    "H_ShemagOpen_tan",
+    "H_ShemagOpen_khk",
+    "H_Beret_blk",
+    "ls_glasses_poncho",
+    "ls_glasses_poncho_partnerBlack",
+    "ls_glasses_poncho_peaceBlue",
+    "ls_glasses_poncho_sidestripeWhite",
+    "ls_glasses_goggles",
+    "ls_glasses_goggles_blue",
+    "ls_glasses_goggles_green",
+    "ls_glasses_goggles_orange",
+    "ls_glasses_goggles_white",
+    "ls_glasses_coif",
+    "ls_glasses_chestRig",
+    "G_JMSLLTE_WeqGlas",
+    "G_JMSLLTE_MechGlass",
+    "G_JMSLLTE_OfheadPh",
+    "G_Spectacles",
+    "G_Squares",
+    "G_Squares_Tinted",
+    "G_Aviator",
+    "H_HeadBandage_bloody_F",
+    "H_HeadBandage_stained_F",
+    "H_HeadBandage_clean_F"
 ];
 
 private _vests =  ("getNumber (_x /'scope') == 2 && getNumber (_x /'itemInfo' /'type') == 701" configClasses (configFile /"cfgWeapons") apply {configName _x}); 
@@ -180,7 +213,7 @@ if (_hasApex) then {_dlcUniforms append [];
 
 ["uniforms", _uniforms] call _fnc_saveToTemplate;         //These Items get added to the Arsenal
 
-["headgear", [] + _headgear] call _fnc_saveToTemplate;          //Headgear used by Rebell Ai until you have Armored Headgear.
+["headgear", _headgear] call _fnc_saveToTemplate;          //Headgear used by Rebell Ai until you have Armored Headgear.
 
 
 /////////////////////
