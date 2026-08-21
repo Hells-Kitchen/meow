@@ -1,0 +1,11 @@
+A3U_ACEAR_active = false;
+A3U_ACEAR_busy = false;
+A3U_ACEAR_hooked = false;
+A3U_ACEAR_refreshQueued = false;
+A3U_ACEAR_mode = "";
+A3U_ACEAR_pending = "";
+A3U_ACEAR_container = objNull;
+A3U_ACEAR_snapPool = [];
+A3U_ACEAR_snapUnit = objNull;
+A3U_ACEAR_itemIndex = [];
+A3U_ACEAR_baseCache = createHashMap;

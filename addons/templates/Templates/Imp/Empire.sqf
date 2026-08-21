@@ -232,12 +232,12 @@ private _mmItems = [];
 if (A3A_hasACE) then {
     _slItems append ["ACE_microDAGR", "ACE_DAGR"];
     _eeItems append ["ACE_Clacker", "ACE_DefusalKit"];
-    _mmItems append ["ACE_RangeCard", "ACE_ATragMX", "ACE_Kestrel4500"];
+    _mmItems append ["ACE_RangeCard", "ACE_ATragMX", "ACE_Kestrel4500","knd_A300_conversionKit_Sniper","knd_camoNetArid","ls_vehicle_turretDroid_packed"];
 };
 
 _loadoutData set ["items_squadLeader_extras", _slItems];
 _loadoutData set ["items_rifleman_extras", []];
-_loadoutData set ["items_medic_extras", []];
+_loadoutData set ["items_medic_extras", ["ls_equipment_squadShield_packed"]];
 _loadoutData set ["items_grenadier_extras", []];
 _loadoutData set ["items_explosivesExpert_extras", _eeItems];
 _loadoutData set ["items_engineer_extras", _eeItems];

@@ -122,6 +122,13 @@
 #define GWEAPON(var1) EGVAR(weapon,var1)
 #define QGWEAPON(var1) QUOTE(GWEAPON(var1))
 
+#define ITEM(CLASSNAME,PRICE,TYPE,CONDITION)\
+class CLASSNAME {\
+    price = PRICE;\
+    type = TYPE;\
+    condition = QUOTE(CONDITION);\
+}
+
 // ACE Cargo
 #define CARGO_XX(a,b) class _xx_##a## {type = QUOTE(a); amount = b;}
 

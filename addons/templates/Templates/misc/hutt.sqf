@@ -16,7 +16,7 @@ private _hasContact = "enoch" in A3A_enabledDLC;
 ["spawnMarkerName", format [localize "STR_supportcorridor", "Hutt Cartel"]] call _fnc_saveToTemplate; 			//this line determines the name tag for the "carrier" on the map -- Example: ["spawnMarkerName", "NATO support corridor"] - ENTER ONLY ONE OPTION. Format and localize function can be used for translation
 
 ["flag", "Flag_AAF_F"] call _fnc_saveToTemplate; 						//this line determines the flag -- Example: ["flag", "Flag_NATO_F"] - ENTER ONLY ONE OPTION
-["flagTexture", "\z\agd\addons\templates\Pictures\Markers\flag_csa_ca.paa"] call _fnc_saveToTemplate; 				//this line determines the flag texture -- Example: ["flagTexture", "\A3\Data_F\Flags\Flag_NATO_CO.paa"] - ENTER ONLY ONE OPTION
+["flagTexture", "JMSLLTE_props\flags\flag_hanging_hutt_co.paa"] call _fnc_saveToTemplate; 				//this line determines the flag texture -- Example: ["flagTexture", "\A3\Data_F\Flags\Flag_NATO_CO.paa"] - ENTER ONLY ONE OPTION
 ["flagMarkerType", "Hutt"] call _fnc_saveToTemplate; 			//this line determines the flag marker type -- Example: ["flagMarkerType", "flag_NATO"] - ENTER ONLY ONE OPTION
 
 //////////////////////////
@@ -447,9 +447,9 @@ _militaryLoadoutData set ["sidearms", [
 ///////////////////////////////
 
 private _policeLoadoutData = _loadoutData call _fnc_copyLoadoutData; 
-_policeLoadoutData set ["uniforms", ["TKE_CombatUniNAPolice_U_B","TKE_CombatUniNARolledPolice_U_B"]];
-_policeLoadoutData set ["vests", ["JMSLLTE_IsbChest_armor"]];
-private _helmets = ["JMSLLTE_Ofcap_NR_helmet","JMSLLTE_OfcapP_NR_helmet","JMSLLTE_OfcapR_NR_helmet"];
+_policeLoadoutData set ["uniforms", ["JMSLLTE_PirShirt_blue_F_CombatUniform"]];
+_policeLoadoutData set ["vests", ["JMSLLTE_PirHeavyB_armor"]];
+private _helmets = ["JMSLLTE_PirSkiff_helmet"];
 _policeLoadoutData set ["helmets", _helmets];
 
 _policeLoadoutData set ["SMGs", [

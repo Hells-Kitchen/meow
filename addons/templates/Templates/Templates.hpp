@@ -21,7 +21,7 @@
     {
         basepath = QPATHTOF(Templates\knd); 
         side = "Reb"; 
-        flagTexture = QPATHTOF(Pictures\Markers\marker_knd_co.paa); 
+        flagTexture = "knd_markers\data\Ral.paa";
         name = "House Kandosii"; 
         file = "House";
         maps[] = {}; 
@@ -32,7 +32,7 @@
     {
         basepath = QPATHTOF(Templates\civ); 
         side = "Civ"; 
-        flagTexture = QPATHTOF(Pictures\Markers\marker_civ_co.paa); 
+        flagTexture = "\A3\ui_f_orange\data\cfgmarkers\civildefense.paa"; 
         name = "[KND] Civilian";
         file = "Civ";
         maps[] = {}; 
@@ -43,7 +43,7 @@
     {
         basepath = QPATHTOF(Templates\CIS); 
         side = "Occ"; 
-        flagTexture = QPATHTOF(Pictures\Markers\marker_cis_co.paa); 
+        flagTexture = "\MRC\JLTS\Core_mod_droids\data\markers\flags\cis_ca.paa"; 
         name = "[KND] CIS Remnants";
         file = "Remnants";
         maps[] = {}; 
@@ -54,7 +54,7 @@
     {
         basepath = QPATHTOF(Templates\misc); 
         side = "Occ"; 
-        flagTexture = QPATHTOF(Pictures\Markers\marker_corpsec_co.paa); 
+        flagTexture = QPATHTOF(Pictures\Markers\marker_csa_co.paa); 
         name = "[KND] Corporate Sector Authority"; 
         file = "gov";
         maps[] = {}; 
@@ -72,7 +72,7 @@
     {
         basepath = QPATHTOF(Templates\rivals); 
         side = "Riv"; 
-        flagTexture = QPATHTOF(Pictures\Markers\marker_dw_co.paa); 
+        flagTexture = QPATHTOF(Pictures\Markers\marker_mando_co.paa); 
         name = "[KND] Clan Nei'idr"; 
         file = "cn";
         maps[] = {}; 
@@ -83,7 +83,7 @@
     {
         basepath = QPATHTOF(Templates\rivals); 
         side = "Riv"; 
-        flagTexture = QPATHTOF(Pictures\Markers\marker_dw_co.paa); 
+        flagTexture = QPATHTOF(Pictures\Markers\marker_mando_co.paa); 
         name = "[KND] Zealots"; 
         file = "zealots";
         maps[] = {}; 

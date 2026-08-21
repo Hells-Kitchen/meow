@@ -1,9 +1,4 @@
-#define ITEM(CLASSNAME, PRICE, TYPE, CONDITION)\
-class CLASSNAME {\
-    price = PRICE;\
-    type = TYPE;\
-    condition = CONDITION;\
-};
+
 
 class traderAddons
 {

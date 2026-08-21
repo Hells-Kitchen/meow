@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3U_ACEAR">
+  <Package name="main">
+    <Container name="Arsenal">
+      <Key ID="STR_A3U_ACEAR_outOfStock">
+        <English>The arsenal does not have enough of that.</English>
+      </Key>
+      <Key ID="STR_A3U_ACEAR_forbidden">
+        <English>%1 cannot be taken from the arsenal.</English>
+      </Key>
+      <Key ID="STR_A3U_ACEAR_noAmmo">
+        <English>Taken, but the arsenal has no ammunition to load it with.</English>
+      </Key>
+      <Key ID="STR_A3U_ACEAR_notAllowed">
+        <English>You are not allowed to do that.</English>
+      </Key>
+      <Key ID="STR_A3U_ACEAR_addTitle">
+        <English>Add Equipment to Arsenal</English>
+      </Key>
+      <Key ID="STR_A3U_ACEAR_transferTitle">
+        <English>Arsenal and Container</English>
+      </Key>
+    </Container>
+  </Package>
+</Project>

@@ -12,14 +12,14 @@ __________________________________________________________________*/
 		stock = STOCK;\
 	}
 
-#define MAGAZINE_STOCK 200
-#define LAUNCHER_STOCK 15
-#define PISTOL_STOCK 50
-#define RIFLE_STOCK 20
-#define MZ_STOCK 50
-#define NN_STOCK 50
-#define PN_STOCK 25
-#define MISC_STOCK 50
+#define MAGAZINE_STOCK 500
+#define LAUNCHER_STOCK 65
+#define PISTOL_STOCK 250
+#define RIFLE_STOCK 200
+#define MZ_STOCK 150
+#define NN_STOCK 150
+#define PN_STOCK 125
+#define MISC_STOCK 1250
 
 class cfgHALsStore 
 {

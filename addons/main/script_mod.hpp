@@ -35,3 +35,5 @@
         #define COMPONENT_NAME QUOTE(A Galaxy Divided 2 - COMPONENT)
     #endif
 #endif
+
+#include "includes\common.inc"

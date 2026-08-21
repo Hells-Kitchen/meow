@@ -85,6 +85,7 @@ private _initialRebelEquipment = [
     "knd_mag_galaar",
     "knd_a280_rotj",
     "knd_a280_rotj_solid",
+    "knd_A280_rotj_mag",
     "knd_a280",
     "knd_a280_wood",
     "knd_mag_A300_Standard",
@@ -100,10 +101,39 @@ private _initialRebelEquipment = [
     "knd_westar_dual",
     "knd_westar_pistol_mag",
     "knd_A280_mag",
+    "ls_backpack_chestRig",
+    "ace_gunbag",
+    "ls_imperialBackpack_satchel",
+    "JMSLLTE_back_dengv1_old",
 	["knd_rps6_disposable", 15],
 	["ls_explosive_demoCharge_magazine", 10],
 	["ls_explosive_breachCharge_magazine", 10],
-    ["ls_explosive_detpack_magazine", 7]
+    ["ls_explosive_detpack_magazine", 7],
+    "knd_bactadressing",
+    "knd_bacta",
+    "knd_coagulex_ampoule",
+    "knd_woundglue",
+    "knd_medical_staple",
+    "knd_comaren_ampoule",
+    "knd_comaren",
+    "knd_cordrazine_ampoule",
+    "knd_cordrazine",
+    "knd_defib",
+    "knd_epinephrine_ampoule",
+    "knd_rapidfuse",
+    "knd_rapidfuse_250",
+    "knd_rapidfuse_500",
+    "knd_meth",
+    "knd_stimpak_ampoule",
+    "knd_stimpak",
+    "knd_symoxin_ampoule",
+    "knd_symoxin",
+    "knd_synthblood",
+    "knd_synthblood_250",
+    "knd_synthblood_500",
+    "knd_voluminex",
+    "knd_voluminex_250",
+    "knd_voluminex_500"
 ];
 
 private _vests =  ("getNumber (_x /'scope') == 2 && getNumber (_x /'itemInfo' /'type') == 701" configClasses (configFile /"cfgWeapons") apply {configName _x}); 
@@ -128,18 +158,19 @@ _headgear = _headgear select {
 };
 _initialRebelEquipment append (_uniforms + _vests + _headgear + _nvgs);
 
-if (A3A_hasTFAR) then {_initialRebelEquipment append ["tf_microdagr","ls_radios_hush98"]};
-if (A3A_hasTFAR && startWithLongRangeRadio) then {_initialRebelEquipment append ["tf_anprc155","Black_WM_Rebel_Radio"]};
-if (A3A_hasTFARBeta) then {_initialRebelEquipment append ["TFAR_microdagr","ls_radios_hush98"]};
-if (A3A_hasTFARBeta && startWithLongRangeRadio) then {_initialRebelEquipment append ["ls_radios_hush98","Black_WM_Rebel_Radio"]};
+if (A3A_hasTFAR) then {_initialRebelEquipment append ["tf_microdagr","JLTS_clone_comlink"]};
+if (A3A_hasTFAR && startWithLongRangeRadio) then {_initialRebelEquipment append ["tf_anprc155","knd_backpack_Clone_SpecOps_RTO"]};
+if (A3A_hasTFARBeta) then {_initialRebelEquipment append ["TFAR_microdagr","JLTS_clone_comlink"]};
+if (A3A_hasTFARBeta && startWithLongRangeRadio) then {_initialRebelEquipment append ["JLTS_clone_comlink","knd_backpack_Clone_SpecOps_RTO"]};
 _initialRebelEquipment append ["Chemlight_blue","Chemlight_green","Chemlight_red","Chemlight_yellow"];
 ["initialRebelEquipment", _initialRebelEquipment] call _fnc_saveToTemplate;
 ["vests", _vests] call _fnc_saveToTemplate;
 ["nvgs", _nvgs] call _fnc_saveToTemplate;
 
-private _rebUniforms = [];          //Uniforms given to Normal Rebels
-
+private _rebUniforms = ["knd_Beroya_Ral","knd_Akior_Ral","knd_Dalverd_Ral"];          //Uniforms given to Normal Rebels
+private _rebVests = ["knd_vest_dalverd_light"];          //Vests given to Normal Rebels
 private _dlcUniforms = [];          //Uniforms given if DLCs are enabled, only given to the Arsenal not Rebels
+private _rebHelmets = ["knd_helmet_Banshee_Ral","knd_Akior_Helmet_Ral","knd_helmet_Dalverd_Ral","knd_helmet_Grunt_Ral","knd_KARVERD_Helmet_Ral"];          //Helmets given to Normal Rebels
 
 if (_hasContact) then {_dlcUniforms append [];
 };
@@ -151,29 +182,29 @@ if (_hasApex) then {_dlcUniforms append [];
 
 ["headgear", [] + _headgear] call _fnc_saveToTemplate;          //Headgear used by Rebell Ai until you have Armored Headgear.
 
+
 /////////////////////
 ///  Identities   ///
 /////////////////////
 
 //Faces and Voices given to Rebell AI
 ["faces", [
-    "WhiteHead_27",
+    "B_female_bun_01",
+    "B_female_bun_03",
+    "knd_faces_day",
+    "knd_faces_mithu",
+    "knd_faces_shobin",
+    "knd_faces_sin",
     "Barklem",
-    "ls_chiss_male2_blue",
-    "ls_chiss_male1_purple",
-    "ls_mirialan_male1_green",
-    "ls_mirialan_male2_sand",
-    "ls_mirialan_male3_yellow",
-    "ls_zabrak_male1t0_base",
-    "ls_zabrak_male1t1_pale",
-    "ls_zeltron_male1_red",
-    "ls_zeltron_male3_pink",
-    "ls_cloneC",
+    "Mavros",
+    "Sturrock",
+    "Ioannou",
+    "GreekHead_A3_13",
+    "GreekHead_A3_14",
+    "GreekHead_A3_11",
     "GreekHead_A3_12",
-    "AfricanHead_01",
-    "WhiteHead_03",
-    "WhiteHead_05",
-    "GreekHead_A3_10_a"
+    "WhiteHead_32",
+    "AsianHead_A3_06"
     ]] call _fnc_saveToTemplate;
 ["voices", ["Male01ENGB","Male02ENGB","Male03ENGB","Male04ENGB","Male05GRE","Male10ENG","Male03POL","Male01CHI","Male02PER","Male01RUS","Male01ENGFRE","Male02FRE"]] call _fnc_saveToTemplate;
 
@@ -186,9 +217,11 @@ _loadoutData set ["watches", ["ItemWatch"]];
 _loadoutData set ["compasses", ["ItemCompass"]];
 _loadoutData set ["binoculars", ["Binocular"]];
 
+_loadoutData set ["helmets", _rebHelmets];
 _loadoutData set ["uniforms", _rebUniforms];
+_loadoutData set ["vests", _rebVests];
 
-_loadoutData set ["facewear", ["ls_jabiimGlasses_goggles"]];
+_loadoutData set ["facewear", ["knd_knife_holster"]];
 
 _loadoutData set ["items_medical_basic", ["BASIC"] call A3A_fnc_itemset_medicalSupplies];
 _loadoutData set ["items_medical_standard", ["STANDARD"] call A3A_fnc_itemset_medicalSupplies];
@@ -200,6 +233,8 @@ _loadoutData set ["items_miscEssentials", [] call A3A_fnc_itemset_miscEssentials
 ///////////////////////.
 
 private _squadLeaderTemplate = {
+    ["helmets"] call _fnc_setHelmet;
+    ["vests"] call _fnc_setVest;
     ["uniforms"] call _fnc_setUniform;
     ["facewear"] call _fnc_setFacewear;
 
@@ -210,6 +245,8 @@ private _squadLeaderTemplate = {
 };
 
 private _riflemanTemplate = {
+    ["helmets"] call _fnc_setHelmet;
+    ["vests"] call _fnc_setVest;
     ["uniforms"] call _fnc_setUniform;
     ["facewear"] call _fnc_setFacewear;
 

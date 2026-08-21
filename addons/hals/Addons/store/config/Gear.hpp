@@ -735,8 +735,9 @@
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\backpack_ca.paa";
 
 
-			ITEM(SquadShieldMagazine,200,MISC_STOCK);
+			ITEM(ls_vehicle_turretDroid_packed,200,MISC_STOCK);
 
 			ITEM(knd_drone_healer,400,MISC_STOCK);
 			ITEM(knd_defib,350,MISC_STOCK);
+			ITEM(knd_jetpacks_fuelCan,20,MISC_STOCK);
 		};

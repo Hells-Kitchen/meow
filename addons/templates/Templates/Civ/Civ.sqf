@@ -131,6 +131,11 @@ _loadoutData set ["pressVests", ["JMSLLTE_NavyChest_armor"]];
 _loadoutData set ["helmets", _civHats];
 _loadoutData set ["pressHelmets", ["JMSLLTE_PlastHv_bl_helmet"]];
 
+_loadoutData set ["items_medical_basic", ["BASIC"] call A3A_fnc_itemset_medicalSupplies]; //this line defines the basic medical loadout for vanilla
+_loadoutData set ["items_medical_standard", ["STANDARD"] call A3A_fnc_itemset_medicalSupplies]; //this line defines the standard medical loadout for vanilla
+_loadoutData set ["items_medical_medic", ["MEDIC"] call A3A_fnc_itemset_medicalSupplies]; //this line defines the medic medical loadout for vanilla
+_loadoutData set ["items_miscEssentials", [] call A3A_fnc_itemset_miscEssentials];
+
 _loadoutData set ["maps", ["ItemMap"]];
 _loadoutData set ["watches", ["ItemWatch"]];
 _loadoutData set ["compasses", ["ItemCompass"]];
