@@ -171,15 +171,15 @@ private _loadoutData = call _fnc_createLoadoutData;
 _loadoutData set ["uniforms", _civUniforms + _dlcUniforms];
 _loadoutData set ["pressUniforms", _pressUniforms];
 _loadoutData set ["workerUniforms", _workerUniforms];
-_loadoutData set ["pressVests", ["V_Press_F"]];
+_loadoutData set ["pressVests", ["JMSLLTE_c_GenVest_blue"]];
 _loadoutData set ["helmets", _civHats + _dlchats];
 _loadoutData set ["workerHelmets", _workerHelmets];
-_loadoutData set ["pressHelmets", ["H_Cap_press", "rhsgref_helmet_pasgt_press"]];
+_loadoutData set ["pressHelmets", ["JMSLLTE_Navy_whiteNR_helmet"]];
 _loadoutData set ["maps", ["ItemMap"]];
 _loadoutData set ["watches", ["ItemWatch"]];
 _loadoutData set ["compasses", ["ItemCompass"]];
 _loadoutData set ["vipUniforms", _vipUniforms];
-_loadoutData set ["sidearms", ["UK3CB_BAF_L9A1", "UK3CB_BAF_L131A1", "UK3CB_BAF_L107A1"]];
+_loadoutData set ["sidearms", ["knd_A300_Pistol_F"]];
 
 private _manTemplate = {
   ["helmets"] call _fnc_setHelmet;
