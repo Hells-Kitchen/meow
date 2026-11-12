@@ -1,5 +1,8 @@
 let pbos = [
-
+    "JMSLLTE_veh_gr.pbo",
+    "JMSLLTE_veh_gr_m.pbo",
+    "JMSLLTE_veh_gr_m_static.pbo",
+    "JMSLLTE_veh_gr_anim.pbo"
 ];
 
 for pbo in pbos {

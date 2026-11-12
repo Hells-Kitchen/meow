@@ -6,7 +6,9 @@ if (_cn in A3U_forbiddenItems && {getNumber (configFile >> "A3U" >> "forbiddenIt
 	false
 };
 
-private _KNDAddonPrefix = "knd_";
+if !(getNumber (_configClass >> "type") in [1, 2, 4]) exitWith { true };
+
+private _KNDAddonPrefix = "agd_";
 private _addons = configSourceAddonList _configClass;
 private _isKND = false;
 {

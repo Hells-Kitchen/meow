@@ -67,69 +67,6 @@ class 3as_3AS_laat_LAATi_model_tcw_laat_p3d : TRIPLES(ADDON,Nodes,Base)
     };
 };
 
-class knd_vehicles_skycat_data_skycat_p3d : TRIPLES(ADDON,Nodes,Base)
-{
-        class Nodes
-    {
-        class Node1
-        {
-            offset[] = {0,5.6,-3.6};
-        };
-        class Node2
-        {
-            offset[] = {0,4.8,-3.6};
-        };
-        class Node3
-        {
-            offset[] = {0,4,-3.6};
-        };
-        class Node4
-        {
-            offset[] = {0,3.2,-3.6};
-        };
-        class Node5
-        {
-            offset[] = {0,2.4,-3.6};
-        };
-        class Node6
-        {
-            offset[] = {0,1.6,-3.6};
-        };
-        class Node7
-        {
-            offset[] = {0,0.8,-3.6};
-        };
-        class Node8
-        {
-            offset[] = {0,-1.19209e-07,-3.6};
-        };
-        class Node9
-        {
-            offset[] = {0,-0.8,-3.6};
-        };
-        class Node10
-        {
-            offset[] = {0,-1.6,-3.6};
-        };
-    };
-};
-
-class knd_vehicles_raat_tracked_rattTracked_p3d : TRIPLES(ADDON,Nodes,Base)
-{
-        class Nodes
-    {
-        class Node1
-        {
-            offset[] = {0,-0.4,0.8};
-        };
-        class Node2
-        {
-            offset[] = {0,-1.2,0.8};
-        };
-    };
-};
-
-
 class 3AS_3AS_Republic_Heli_LAS_model_3AS_LAS_z6_p3d : TRIPLES(ADDON,Nodes,Base)
 {
         class Nodes

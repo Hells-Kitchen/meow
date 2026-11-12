@@ -5,10 +5,10 @@ class CfgPatches
     class ADDON 
     {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {"AGD_Module_Support_Occupants_QRFCapital", "AGD_Module_Support_Invaders_QRFCapital", "AGD_Module_Support_Occupants_QRFCapitalLinger", "AGD_Module_Support_Invaders_QRFCapitalLinger"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {};
+        requiredAddons[] = {"A3A_zeus"};
         author = AUTHOR;
         authors[] = { AUTHOR};
         authorUrl = "";
@@ -16,6 +16,9 @@ class CfgPatches
     };
 };
 
+
+#include "CfgFunctions.hpp"
+#include "CfgVehicles.hpp"
 
 class A3U
 {
