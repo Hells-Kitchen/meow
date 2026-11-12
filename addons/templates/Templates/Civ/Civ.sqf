@@ -1,3 +1,6 @@
+private _hasKND = isClass (configFile >> "CfgPatches" >> "knd_common");
+private _hasLLTE = isClass (configFile >> "CfgPatches" >> "JMSLLTE_empire_mod");
+
 private _hasApex = "expansion" in A3A_enabledDLC;
 
 private _hasSFA = isClass (configFile >> "CfgPatches" >> "SFA_Core");
@@ -10,32 +13,47 @@ private _hasSFA = isClass (configFile >> "CfgPatches" >> "SFA_Core");
 //       Vehicles       //
 //////////////////////////
 
-["vehiclesCivCar", [
+private _vehiclesCivCar = [
     "ls_vehicle_v35", 1.8,
     "ls_vehicle_105kLancer_civ", 1.4
-    ]] call _fnc_saveToTemplate;
-
-["vehiclesCivIndustrial", [
+    ];
+private _vehiclesCivIndustrial = [
     "JMSLLTE_C_veh_AA5_F", 1.0
-]] call _fnc_saveToTemplate;
-
-["vehiclesCivBoat", [
+];
+private _vehiclesCivBoat = [
     "C_Boat_Civil_01_rescue_F", 0.1            // motorboats
     ,"C_Boat_Civil_01_F", 1.0
     ,"C_Rubberboat", 1.0                    // rescue boat
     ,"C_Boat_Transport_02_F", 1.0            // RHIB
-    ,"C_Scooter_Transport_01_F", 0.5]] call _fnc_saveToTemplate;
+    ,"C_Scooter_Transport_01_F", 0.5];
+private _vehiclesCivRepair = [
+    "JMSLLTE_C_veh_AA5sup_F", 0.3];
+private _vehiclesCivMedical = ["AGD_Truck_Civ", 0.1];
+private _vehiclesCivFuel = [
+    "AGD_Truck_Civ_Fuel", 0.2];
+private _vehiclesCivHeli = ["3AS_Aegis_Shuttle_Civ_Green"];
 
-["vehiclesCivRepair", [
-    "JMSLLTE_C_veh_AA5sup_F", 0.3]] call _fnc_saveToTemplate;
+if (_hasKND) then {
+    // _vehiclesCivCar append ["KND_VEHICLE_CLASSNAME", 1];
+};
+if (_hasLLTE) then {
+    // Add LLTE vehicles here.
+};
 
-["vehiclesCivMedical", ["AGD_Truck_Civ", 0.1]] call _fnc_saveToTemplate;
+["vehiclesCivCar", _vehiclesCivCar] call _fnc_saveToTemplate;
 
-["vehiclesCivFuel", [
-    "AGD_Truck_Civ_Fuel", 0.2]] call _fnc_saveToTemplate;
+["vehiclesCivIndustrial", _vehiclesCivIndustrial] call _fnc_saveToTemplate;
+
+["vehiclesCivBoat", _vehiclesCivBoat] call _fnc_saveToTemplate;
+
+["vehiclesCivRepair", _vehiclesCivRepair] call _fnc_saveToTemplate;
+
+["vehiclesCivMedical", _vehiclesCivMedical] call _fnc_saveToTemplate;
+
+["vehiclesCivFuel", _vehiclesCivFuel] call _fnc_saveToTemplate;
 
 
-["vehiclesCivHeli", ["3AS_Aegis_Shuttle_Civ_Green"]] call _fnc_saveToTemplate;
+["vehiclesCivHeli", _vehiclesCivHeli] call _fnc_saveToTemplate;
 
 /////////////////////////////////
 ///  Identities and currency  ///
@@ -165,6 +183,10 @@ private _workerUniforms = [
     ];
 
 private _dlcUniforms = [];
+if (_hasKND) then {
+    // _civUniforms append ["KND_UNIFORM_CLASSNAME"];
+};
+
 ["uniforms", _civUniforms + _pressUniforms + _workerUniforms + _dlcUniforms] call _fnc_saveToTemplate;
 
 private _civhats = [];

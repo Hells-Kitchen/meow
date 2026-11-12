@@ -1,0 +1,29 @@
+#include "..\missionDescription\master.hpp"
+
+OnLoadName = "$STR_A3UE_maps_Sullust_mapname_short";
+OnLoadMission = "$STR_A3UE_maps_Sullust_loadText";
+briefingName = "$STR_A3UE_maps_Sullust_mapname";
+overviewText = "$STR_A3UE_maps_Sullust_description";
+loadScreen = "\x\A3A\addons\maps\images_co.jpg"; // NB, this will resolve from root // NB, this will resolve from root
+overviewPicture = "\x\A3A\addons\maps\images_co.jpg"; // NB, this will resolve from root
+
+class CfgDiscordRichPresence
+{
+    applicationID="819852407265034260";
+    defaultDetails="";
+    defaultState="";
+    defaultLargeImageKey="Sullust";
+    defaultLargeImageText="Antistasi Ultimate - Sullust";
+    defaultSmallImageKey="arma_3_logo";
+    defaultSmallImageText="Arma 3 Custom Scenario";
+    useTimeElapsed=1;
+};
+
+class CfgNotifications
+{
+    #include "..\missionDescription\CfgNotificationsContents.hpp"
+};
+
+class CfgDebriefing {
+    #include "..\missionDescription\CfgDebriefingContents.hpp"
+};

@@ -11,9 +11,9 @@
 "ls_cows_westar35s_scope",\
 "WM_E11_Optic",\
 "3AS_optic_DC15L_F",\
-"optic_Yorris",
-"3AS_Optic_Arkanian_Pistol_1_F",
-"3AS_S5_Scope",
+"optic_Yorris",\
+"3AS_Optic_Arkanian_Pistol_1_F",\
+"3AS_S5_Scope",\
 "3AS_Imp_Optic_SE14R"
 
 

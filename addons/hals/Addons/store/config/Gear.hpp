@@ -47,7 +47,7 @@ class riflesAGD
 	ITEM(agd_weapons_DP23_GL, 450, RIFLE_STOCK);
 	ITEM(agd_weapons_SBB3, 350, RIFLE_STOCK);
 	ITEM(agd_weapon_BARM_Shotgun, 150, RIFLE_STOCK);
-	ITEM(agd_weapons_ScatterGun_F, 350, RIFLE_STOCK)
+	ITEM(agd_weapons_ScatterGun_F, 350, RIFLE_STOCK);
 };
 
 class sniperRiflesAGD
@@ -553,10 +553,6 @@ class magazinesAGD
 		stock = MAGAZINE_STOCK;
 	};
 	class WM_E11D_Mag {
-		price = 75;
-		stock = MAGAZINE_STOCK;
-	};
-	class 3AS_45Rnd_EY50_Mag {
 		price = 75;
 		stock = MAGAZINE_STOCK;
 	};
