@@ -279,13 +279,13 @@ _loadoutData set ["slUniforms", []];
 _loadoutData set ["sniUniforms", []];
 _loadoutData set ["vests", []];						//don't fill this line - this is only to set the variable
 _loadoutData set ["Hvests", []];
-_loadoutData set ["sniVests", ["ls_cloneVest_recon"]];
+_loadoutData set ["sniVests", ["ls_imperialVest_army_light"]];
 _loadoutData set ["backpacks", []];					//don't fill this line - this is only to set the variable
 _loadoutData set ["longRangeRadios", ["WM_Stormtrooper_Backpack_RTO"]];
 _loadoutData set ["atBackpacks", ["WM_Artillery_Pack"]];
 _loadoutData set ["helmets", []];					//don't fill this line - this is only to set the variable
-_loadoutData set ["slHat", ["H_Beret_blk", "H_MilCap_dgtl"]];
-_loadoutData set ["sniHats", ["H_Booniehat_dgtl"]];
+_loadoutData set ["slHat", ["ls_imperialHelmet_army"]];
+_loadoutData set ["sniHats", ["ls_imperialHelmet_kepi"]];
 
 _loadoutData set ["glasses", ["ls_imperial_earPiece"]];	//cosmetics
 _loadoutData set ["goggles", ["ls_imperial_earPiece"]];		//cosmetics

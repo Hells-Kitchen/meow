@@ -1,6 +1,5 @@
 private _hasKND = isClass (configFile >> "CfgPatches" >> "knd_common");
 private _hasLLTE = isClass (configFile >> "CfgPatches" >> "JMSLLTE_empire_mod");
-
 //these variables determine whether specified dlcs are loaded
 private _hasWs = "ws" in A3A_enabledDLC;
 private _hasMarksman = "mark" in A3A_enabledDLC;
@@ -763,6 +762,8 @@ if (_hasLLTE) then {
         "JMSLLTE_back_rebpackH_v1_wood"
     ];
 };
+
+
 
 //////////////////////////
 //    Misc Loadouts     //

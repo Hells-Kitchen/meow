@@ -36,6 +36,167 @@ passed output from the function: A3A_Logistics_fnc_generateHardPoints
 /*
 example output
 */
+class 3AS_3AS_Itt_model_3AS_ITT_p3d : TRIPLES(ADDON,Nodes,Base)
+{
+        class Nodes
+    {
+        class Node1
+        {
+            offset[] = {0,0.6,-1.5};
+        };
+        class Node2
+        {
+            offset[] = {0,-0.2,-1.5};
+        };
+        class Node3
+        {
+            offset[] = {0,-1,-1.5};
+        };
+        class Node4
+        {
+            offset[] = {0,-1.8,-1.5};
+        };
+        class Node5
+        {
+            offset[] = {0,-2.6,-1.5};
+        };
+        class Node6
+        {
+            offset[] = {0,-3.4,-1.5};
+        };
+    };
+};
+class 3AS_3as_LAAT_LAAT_LE_LAAT_LE_p3d : TRIPLES(ADDON,Nodes,Base)
+{
+        class Nodes
+    {
+        class Node1
+        {
+            offset[] = {0,0.6,1};
+        };
+    };
+};
+class 3as_3as_Jug_model_3as_jug_p3d : TRIPLES(ADDON,Nodes,Base)
+{
+        class Nodes
+    {
+        class Node1
+        {
+            offset[] = {-3,4.6,10};
+        };
+        class Node2
+        {
+            offset[] = {-3,3.8,10};
+        };
+        class Node3
+        {
+            offset[] = {-3,3,10};
+        };
+        class Node4
+        {
+            offset[] = {-3,2.2,10};
+        };
+        class Node5
+        {
+            offset[] = {-3,1.4,10};
+        };
+        class Node6
+        {
+            offset[] = {-3,0.6,10};
+        };
+        class Node7
+        {
+            offset[] = {-3,-0.2,10};
+        };
+        class Node8
+        {
+            offset[] = {-3,-1,10};
+        };
+    };
+};
+
+class 3as_3AS_Republic_Heli_Nu_Class_model_3AS_NuClass_p3d : TRIPLES(ADDON,Nodes,Base)
+{
+        class Nodes
+    {
+        class Node1
+        {
+            offset[] = {0,0.6,3.5};
+        };
+        class Node2
+        {
+            offset[] = {0,-0.2,3.5};
+        };
+        class Node3
+        {
+            offset[] = {0,-1,3.5};
+        };
+        class Node4
+        {
+            offset[] = {0,-1.8,3.5};
+        };
+        class Node5
+        {
+            offset[] = {0,-2.6,3.5};
+        };
+        class Node6
+        {
+            offset[] = {0,-3.4,3.5};
+        };
+        class Node7
+        {
+            offset[] = {0,-4.2,3.5};
+        };
+        class Node8
+        {
+            offset[] = {0,-5,3.5};
+        };
+    };
+};
+class WarMantle_WM_Imperial_Vehicles_74Z_speederbike_p3d : TRIPLES(ADDON,Nodes,Base)
+{
+        class Nodes
+    {
+        class Node1
+        {
+            offset[] = {0,-1.4,0};
+        };
+    };
+};
+class JMSLLTE_veh_gr_m_Hovertanks_S1_firehawke_p3d : TRIPLES(ADDON,Nodes,Base)
+{
+        class Nodes
+    {
+        class Node1
+        {
+            offset[] = {0,2.6,0};
+        };
+    };
+};
+
+class 3AS_3AS_ATTE_model_3AS_ATTE_p3d : TRIPLES(ADDON,Nodes,Base)
+{
+        class Nodes
+    {
+        class Node1
+        {
+            offset[] = {0,-0.4,5};
+        };
+        class Node2
+        {
+            offset[] = {0,-1.2,5};
+        };
+        class Node3
+        {
+            offset[] = {0,-2,5};
+        };
+        class Node4
+        {
+            offset[] = {0,-2.8,5};
+        };
+    };
+};
+
 class 3as_3AS_laat_LAATi_model_tcw_laat_p3d : TRIPLES(ADDON,Nodes,Base)
 {
         class Nodes
@@ -122,6 +283,17 @@ class 3as_3AS_Rebel_Armor_PX10_Cav_model_3AS_PX10_p3d : TRIPLES(ADDON,Nodes,Base
         };
     };
 };
+class WarMantle_WM_Imperial_Vehicles_CombatSpeeder_V25_p3d : TRIPLES(ADDON,Nodes,Base)
+{
+        class Nodes
+    {
+        class Node1
+        {
+            offset[] = {0,-1.9,1.3};
+        };
+    };
+};
+
 class JMSLLTE_veh_air_m2_IDT_IDT_p3d : TRIPLES(ADDON,Nodes,Base)
 {
         class Nodes
@@ -363,6 +535,67 @@ class 3AS_3AS_Imperial_Air_Gozanti_model_3AS_Gozanti_Class_Cruiser_p3d : TRIPLES
         };
     };
 };
+class knd_vehicles_skycat_data_skycat_p3d : TRIPLES(ADDON,Nodes,Base)
+{
+        class Nodes
+    {
+        class Node1
+        {
+            offset[] = {0,5.6,-3.6};
+        };
+        class Node2
+        {
+            offset[] = {0,4.8,-3.6};
+        };
+        class Node3
+        {
+            offset[] = {0,4,-3.6};
+        };
+        class Node4
+        {
+            offset[] = {0,3.2,-3.6};
+        };
+        class Node5
+        {
+            offset[] = {0,2.4,-3.6};
+        };
+        class Node6
+        {
+            offset[] = {0,1.6,-3.6};
+        };
+        class Node7
+        {
+            offset[] = {0,0.8,-3.6};
+        };
+        class Node8
+        {
+            offset[] = {0,-1.19209e-07,-3.6};
+        };
+        class Node9
+        {
+            offset[] = {0,-0.8,-3.6};
+        };
+        class Node10
+        {
+            offset[] = {0,-1.6,-3.6};
+        };
+    };
+};
+
+class knd_vehicles_raat_tracked_rattTracked_p3d : TRIPLES(ADDON,Nodes,Base)
+{
+        class Nodes
+    {
+        class Node1
+        {
+            offset[] = {0,-0.4,0.8};
+        };
+        class Node2
+        {
+            offset[] = {0,-1.2,0.8};
+        };
+    };
+};
 class 3as_3as_Starships_model_Republic_Transport_p3d : TRIPLES(ADDON,Nodes,Base)
 {
         class Nodes
@@ -518,6 +751,42 @@ class JMSLLTE_veh_gr_m_skiff_banthaSkiff : TRIPLES(ADDON,Nodes,Base)
         class Node4
         {
             offset[] = {0,-0.8,0};
+        };
+    };
+};
+class knd_vehicles_civilians_agrihauler_data_TruckFreight_p3d : TRIPLES(ADDON,Nodes,Base)
+{
+        class Nodes
+    {
+        class Node1
+        {
+            offset[] = {0,1.6,1};
+        };
+        class Node2
+        {
+            offset[] = {0,0.8,1};
+        };
+        class Node3
+        {
+            offset[] = {0,0,1};
+        };
+        class Node4
+        {
+            offset[] = {0,-0.8,1};
+        };
+        class Node5
+        {
+            offset[] = {0,-1.6,1};
+        };
+    };
+};
+class knd_vehicles_civilians_agrihauler_data_Truck_p3d : TRIPLES(ADDON,Nodes,Base)
+{
+        class Nodes
+    {
+        class Node1
+        {
+            offset[] = {0,-2.4,1.5};
         };
     };
 };

@@ -19,12 +19,6 @@ class CfgFunctions
                 file = QPATHTOF(functions\Ammunition\fn_equipmentSort.sqf);
             };
         };
-        class ItemSets 
-        {
-            class itemset_medicalSupplies { 
-                file = QPATHTOF(functions\Itemsets\fn_itemset_medicalSupplies.sqf);
-            };
-        };
     };
     // class AGD
     // {

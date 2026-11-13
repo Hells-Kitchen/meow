@@ -157,17 +157,11 @@ private _civUniforms = [
     "AGD_Worker_Uniform6",
     "AGD_Worker_Uniform7",
     "AGD_Worker_Uniform8",
-    "AGD_Worker_Uniform9",
-    "ls_uniform_pathfinder",
-    "WM_ParaMilitary_Tee",
-    "WM_ParaMilitary_Dst_Shirt",
-    "3AS_U_Imperial_Army_Recruit_F",
-    "WM_ArmyUniform",
-    "ls_mandalorianUniform"
+    "AGD_Worker_Uniform9"
 ];
 
 private _pressUniforms = [
-    "ls_orsfUniform_trooper"
+    "AGD_Worker_Uniform9"
     ];
 
 private _workerUniforms = [

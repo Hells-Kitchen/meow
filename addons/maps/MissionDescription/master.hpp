@@ -12,7 +12,7 @@ missionGroup = "AntistasiUltimate";
 #ifndef CUSTOM_A3A_CLASS
 	class A3A {
 		//used mainly to detect that the mission is a A3A mission, can also contain other data in the future
-		version[] = {VERSION_AR};
+		version[] = {A3A_COMPAT_MAJOR,A3A_COMPAT_MINOR};
 	};
 #endif
 

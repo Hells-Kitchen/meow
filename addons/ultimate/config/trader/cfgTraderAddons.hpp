@@ -7,9 +7,13 @@
         Essentially, this is the core file. It links to other files.
     */
     
+    class addons_agd_weapons : addons_base
+    {
+        addons[] = {"agd_weapons"};
+        weapons = "AGD_stock";
+    };
     class addons_agd_weapons_knd : addons_base
     {
         addons[] = {"knd_newArmor"};
-        weapons = "AGD_KND_stock";
         vehicles = "vehicles_knd";
     };

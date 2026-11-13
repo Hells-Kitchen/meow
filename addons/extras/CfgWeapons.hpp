@@ -1,6 +1,14 @@
 class CfgWeapons {
-	class WM_StormHelmet;
-	class WM_ScoutHelmet;
+	class H_HelmetO_ViperSP_hex_F;
+	class WM_StormHelmet: H_HelmetO_ViperSP_hex_F {
+		class ItemInfo;
+	};
+	class WM_ScoutHelmet: H_HelmetO_ViperSP_hex_F {
+		class ItemInfo;
+	};
+	class WM_DriverHelmet: H_HelmetO_ViperSP_hex_F {
+		class ItemInfo;
+	};
 	class AGD_MudtrooperHelmet: WM_StormHelmet {
 		scope = 2;
 		displayName = "Mudtrooper Helmet";
@@ -27,6 +35,15 @@ class CfgWeapons {
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {QPATHTOF(data\Remnants\Helmet1_co.paa)};
 		subItems[] = {};
+		class ItemInfo: ItemInfo {
+			class HitpointsProtectionInfo {
+				class Head {
+					hitpointName = "HitHead";
+					armor = 4;
+					passThrough = 0.5;
+				};
+			};
+		};
 	};
 	class AGD_RemnantHelmet_2: AGD_RemnantHelmet_1 {
 		displayName = "Imperial Remnant Sergeant Helmet";
@@ -42,6 +59,15 @@ class CfgWeapons {
 	};
 	class AGD_RemnantHelmet_Scout_1: WM_ScoutHelmet {
 		scope = 2;
+		class ItemInfo: ItemInfo {
+			class HitpointsProtectionInfo {
+				class Head {
+					hitpointName = "HitHead";
+					armor = 4;
+					passThrough = 0.5;
+				};
+			};
+		};
 		displayName = "Imperial Remnant Scout Helmet (Type 1)";
 		hiddenSelections[] = {"Camo1","Camo"};
 		hiddenSelectionsTextures[] = {QPATHTOF(data\Remnants\ScoutHelmet1_co.paa),QPATHTOF(data\Remnants\ScoutHelmet1_co.paa)};
@@ -50,17 +76,20 @@ class CfgWeapons {
 		displayName = "Imperial Remnant Scout Helmet (Type 2)";
 		hiddenSelectionsTextures[] = {QPATHTOF(data\Remnants\ScoutHelmet2_co.paa),QPATHTOF(data\Remnants\ScoutHelmet2_co.paa)};
 	};
-	class WM_DriverHelmet;
+
 	class AGD_Imp_DriverHelmet: WM_DriverHelmet {
+		class ItemInfo: ItemInfo {
+			class HitpointsProtectionInfo {
+				class Head {
+					hitpointName = "HitHead";
+					armor = 4;
+					passThrough = 0.5;
+				};
+			};
+		};
 		author = "Ramsey";
 		hiddenSelections[] = {"Camo","Camo1"};
 		hiddenSelectionsTextures[] = {QPATHTOF(data\DriverHelm_co.paa),QPATHTOF(data\DriverHelm_co.paa)};
-	};
-	class IDA_A260;
-	class AGD_A130: IDA_A260 {
-		author = "Ramsey";
-		displayName = "A130 Blaster Repeater";
-		magazines[] = {"AGD_A130_Mag"};
 	};
 	class ls_imperialVest_isb_heavy_h;
 	class ls_imperialVest_army_h;
@@ -130,7 +159,6 @@ class CfgWeapons {
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {QPATHTOF(data\camo1_co.paa)};
 	};
-
 	#include "blackwing\uniforms.hpp"
 	#include "remnants\uniforms.hpp"
 	#include "civ\uniforms.hpp"

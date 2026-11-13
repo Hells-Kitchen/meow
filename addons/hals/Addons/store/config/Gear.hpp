@@ -13,7 +13,7 @@ class handgunsAGD
 
 class riflesAGD
 {
-	displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_Vanilla", localize "STR_A3AU_rifles"]);
+	displayName = "Blaster Rifles"
 	picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
 
 	ITEM(agd_weapon_bk43, 350, RIFLE_STOCK);
@@ -52,7 +52,7 @@ class riflesAGD
 
 class sniperRiflesAGD
 {
-	displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_Vanilla", localize "STR_A3AU_sniperRifles"]);
+	displayName = "Blaster Sniper Rifles"
 	picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
 
 	ITEM(agd_weapons_DymekSniperRifle_F, 1600, RIFLE_STOCK);
@@ -72,7 +72,7 @@ class sniperRiflesAGD
 
 class mgAGD
 {
-	displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_Vanilla", localize "STR_A3AU_mgs"]);
+	displayName = "Blaster Machine Guns";
 	picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
 
 	ITEM(agd_weapons_T21, 1600, RIFLE_STOCK);
@@ -91,7 +91,7 @@ class mgAGD
 
 class smgAGD
 {
-	displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_Vanilla", localize "STR_A3AU_smgs"]);
+	displayName = "Blaster SMGs";
 	picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
 
 	ITEM(agd_weapons_acpr, 350, RIFLE_STOCK);
@@ -103,7 +103,7 @@ class smgAGD
 
 class launchersAGD
 {
-	displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_Vanilla", localize "STR_A3AU_launchers"]);
+	displayName = "Launchers";
 	picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\secondaryWeapon_ca.paa";
 
 	ITEM(launch_NLAW_F, 2000, LAUNCHER_STOCK);
@@ -122,7 +122,7 @@ class launchersAGD
 
 class launcherMagazinesAGD
 {
-	displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_Vanilla", localize "STR_A3AU_launcherAmmo"]);
+	displayName = "Launcher Ammo";
 	picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargoMag_ca.paa";
 
 	class NLAW_F {
@@ -157,7 +157,7 @@ class launcherMagazinesAGD
 
 class navigationVanilla
 {
-	displayName = __EVAL(formatText ["%1 %2, %3 %4 %5", localize "STR_A3AU_Vanilla", localize "STR_A3AU_gps", localize "STR_A3AU_binoculars", localize "STR_A3AU_and", localize "STR_A3AU_nvgs"]);
+	displayName = "Navigation Gear";
 	picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\compass_ca.paa";
 
 	ITEM(ItemGPS, 300, NN_STOCK);
@@ -173,7 +173,7 @@ class navigationVanilla
 
 class pointersAGD
 {
-	displayName = __EVAL(formatText ["%1 %2 %3 %4", localize "STR_A3AU_Vanilla", localize "STR_A3AU_pointers", localize "STR_A3AU_and", localize "STR_A3AU_flashlights"]);
+	displayName = "Pointers and Flashlights";
 	picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemAcc_ca.paa";
 
 	ITEM(3AS_Imp_Light_DLT19, 75, PN_STOCK);
@@ -185,7 +185,7 @@ class pointersAGD
 
 class muzzlesAGD
 {
-	displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_Vanilla", localize "STR_A3AU_muzzles"]);
+	displayName = "Muzzles";
 	picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemMuzzle_ca.paa";
 
 	ITEM(ls_muzzle_westar35s_suppressor, 150, MZ_STOCK);
@@ -203,7 +203,7 @@ class muzzlesAGD
 
 class opticsAGD
 {
-	displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_Vanilla", localize "STR_A3AU_sights"]);
+	displayName = "Sights";
 	picture = "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa";
 
 	class optic_tws {
@@ -349,7 +349,7 @@ class opticsAGD
 
 class magazinesAGD
 {
-	displayName = __EVAL(formatText["%1 %2", localize "STR_A3AU_Vanilla", localize "STR_A3AU_magazines"]);
+	displayName = "Magazines";
 	picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargoMag_ca.paa";
 
 	class Laserbatteries {
@@ -699,7 +699,7 @@ class magazinesAGD
 
 class miscAGD
 {
-	displayName = __EVAL(formatText ["%1 %2", localize "STR_A3AU_Vanilla", localize "STR_A3AU_misc"]);
+	displayName = "Miscellaneous";
 	picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\backpack_ca.paa";
 
 	ITEM(ls_orsfUniform_trooper, 500, MISC_STOCK);

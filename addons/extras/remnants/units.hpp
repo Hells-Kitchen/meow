@@ -1,6 +1,8 @@
 
-class AGD_Remnant_Stormtrooper: WM_Stormtrooper_E11{
+class O_Soldier_A_F;
+class AGD_Remnant_Stormtrooper: O_Soldier_A_F{
 	scope = 1;
+	model = "WarMantle\WM_Imperial_Core\Stormtrooper_Uniform.p3d";
 	displayName = "Remnant Stormtrooper";
 	faction = "Antistasi_Empire";
     modelSides[] = {0, 1, 2, 3, 4, 5, 6, 7};

@@ -1,5 +1,10 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
+#define VERSION_CONFIG version = VERSION; \
+    versionStr = QUOTE(VERSION_STR); \
+    versionAr[] = {VERSION_AR}; \
+    A3A_compatibility[] = {A3A_COMPAT_MAJOR, A3A_COMPAT_MINOR}
+
 #define E_ADDON(var1) DOUBLES(PREFIX,var1)
 #define QE_ADDON(var1) QUOTE(E_ADDON(var1))
 #define QQE_ADDON(var1) QUOTE(QE_ADDON(var1))

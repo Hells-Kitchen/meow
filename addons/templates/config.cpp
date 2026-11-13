@@ -6,7 +6,7 @@ class CfgPatches
     {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {"knd_a3a_jockey","knd_a3a_jockey_alt","knd_a3a_jockey_navy","knd_a3a_jockey_navy_alt"};
+        weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {};
         author = AUTHOR;

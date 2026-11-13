@@ -23,7 +23,7 @@
     {
         basepath = QPATHTOF(Templates\Reb); 
         side = "Inv"; 
-        flagTexture = QPATHTOF(Pictures\Markers\marker_rebel_alliance_co.paa); 
+        flagTexture = QPATHTOF(Pictures\Markers\marker_rebels_co.paa); 
         name = "[AGD] Rebel Alliance";
         file = "Base";
         maps[] = {}; 
@@ -46,25 +46,18 @@
     {
         basepath = QPATHTOF(Templates\Rep); 
         side = "Occ"; 
-        flagTexture = QPATHTOF(Pictures\Markers\marker_republic_co.paa); 
+        flagTexture = "\ls\core\addons\data\flags\flag_republic_ca.paa"; 
         name = "[AGD] Galactic Republic";
         file = "Base";
         maps[] = {}; 
         climate[] = {"arid", "arctic", "temperate", "tropical"}; 
         description = "The Galactic Republic was the government that preceded the Galactic Empire, known for its democratic institutions and the Jedi Order"; 
     };
-    class RepublicLSP1: Republic
-    {
-        side = "Occ"; 
-        name = "[AGD] Galactic Republic Legion Studios - Phase 1";
-        file = "LS";
-        description = "The Galactic Republic using LS' old clone model base"; 
-    };
     class CIS: AGD_Base
     {
         basepath = QPATHTOF(Templates\CIS); 
         side = "Inv"; 
-        flagTexture = QPATHTOF(Pictures\Markers\marker_cis_co.paa); 
+        flagTexture = "\ls\core\addons\data\flags\flag_cis_ca.paa"; 
         name = "[AGD] Confederacy of Independent Systems";
         file = "Base";
         maps[] = {}; 
@@ -87,7 +80,7 @@
     {
         basepath = QPATHTOF(Templates\Civ); 
         side = "Civ"; 
-        flagTexture = QPATHTOF(Pictures\Markers\marker_civvies_co.paa); 
+        flagTexture = ""; 
         name = "[AGD] Civilians";
         file = "Civ";
         maps[] = {}; 
@@ -97,3 +90,17 @@
 /*
     Climates: {"arid", "arctic", "temperate", "tropical"}
 */
+
+// Rebels
+
+    class Remnant: AGD_Base
+    {
+        basepath = QPATHTOF(Templates\Rebel); 
+        side = "Reb"; 
+        flagTexture = QPATHTOF(Pictures\Markers\marker_remnants_co.paa); 
+        name = "[AGD] Imperial Remnant";
+        file = "Remnant";
+        maps[] = {}; 
+        climate[] = {"arid", "arctic", "temperate", "tropical"}; 
+        description = "The Imperial Remnant is a faction that emerged from the remnants of the Galactic Empire, seeking to restore its former glory"; 
+    };

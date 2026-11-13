@@ -20,10 +20,18 @@ example output bellow, you can modify it as you'd like by for example adding a b
 
 class knd_turrets_imperial_eweb : TRIPLES(ADDON,Cargo,Base)
 {
-    offset[] = {0,-0.5,1}; // this was sinking into the truck before... I swear to god if it floats now
+    offset[] = {0,-0.5,1}; // 
     rotation[] = {0,1.2,0};
     size = 2;
     recoil = 2000;
     isWeapon = 1;
 };
 class knd_turrets_imperial_T21:knd_turrets_imperial_eweb{};
+class ls_vehicle_mrbc : TRIPLES(ADDON,Cargo,Base)
+{
+    offset[] = {0,-0.5,1};
+    rotation[] = {0,1.2,0};
+    size = 2;
+    recoil = 2000;
+    isWeapon = 1;
+};

@@ -7,7 +7,7 @@ class CfgPatches
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
-        requiredVersion = 2.18;
+        requiredVersion = REQUIRED_VERSION;
         requiredAddons[] =
         {
             "A3A_core"
@@ -15,6 +15,7 @@ class CfgPatches
         author = AUTHOR;
         authors[] = { AUTHOR};
         authorUrl = "";
+        VERSION_CONFIG;
     };
 };
 

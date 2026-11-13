@@ -14,6 +14,7 @@ class CfgPatches
         authors[] = { AUTHOR };
         authorUrl = "";
         skipWhenMissingDependencies = 1;
+        VERSION_CONFIG;
     };
 };
 class CfgFactionClasses

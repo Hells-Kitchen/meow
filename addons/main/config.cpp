@@ -11,7 +11,7 @@ class CfgPatches {
             ITEM_LIST
         };
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"A3_Data_F_Decade_Loadorder"};
+        requiredAddons[] = {"A3A_core", "A3A_ultimate"};
         author = AUTHOR;
         authors[] = {""};
         url = CSTRING(URL);
@@ -20,3 +20,7 @@ class CfgPatches {
 };
 
 
+class A3A 
+{
+    #include "params/params.hpp"
+};

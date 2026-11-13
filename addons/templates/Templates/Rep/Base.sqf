@@ -1,6 +1,9 @@
 private _hasKND = isClass (configFile >> "CfgPatches" >> "knd_common");
 private _hasLLTE = isClass (configFile >> "CfgPatches" >> "JMSLLTE_empire_mod");
 
+//Read clone armor type param (0 = standard mix, 1 = phase 1, 2 = phase 2, 3 = 501st)
+private _cloneArmorType = missionNamespace getVariable ["A3UE_RebelCloneArmorType", 0];
+
 //these variables determine whether specified dlcs are loaded
 private _hasWs = "ws" in A3A_enabledDLC;
 private _hasMarksman = "mark" in A3A_enabledDLC;
@@ -255,6 +258,43 @@ _loadoutData set ["sniHats", ["JLTS_CloneHelmetBARC"]];
 _loadoutData set ["glasses", ["ls_glasses_headlamp_invisible_double"]];	//cosmetics
 _loadoutData set ["goggles", ["ls_glasses_headlamp_invisible_double"]];		//cosmetics
 
+switch (_cloneArmorType) do {
+    case 1: { // LS - Phase 1
+        _loadoutData set ["NVGs", ["ls_cloneNVG_phase1Headlamp","ls_cloneNVG_phase1Headlamp_double","ls_gar_p1StandardSPC_nvg","lsd_gar_p1Rangefinder_nvg","lsd_gar_p1Standard_nvg","lsd_gar_artilleryGunner_nvg","lsd_gar_p1Commander_nvg","lsd_gar_p1MarshalCommander_nvg"]];
+        _loadoutData set ["officerUniforms", ["ls_cloneUniform_misc_commander"]];
+        _loadoutData set ["officerVests", ["lsd_gar_alphaArc_vest_yellow"]];
+        _loadoutData set ["officerHats", ["ls_cloneHelmet_phase1_misc_commander"]];
+        _loadoutData set ["glasses", ["ls_clone_p1Rangefinder_hud","ls_glasses_poncho","lsd_gar_p1ArtilleryGunner_hud","ls_glasses_scarf","ls_clone_headlampPhase1_hud","ls_clone_headlampPhase1_double_hud","ls_clone_headlampPhase1_left_hud","ls_clone_phase1_hud"]];
+        _loadoutData set ["goggles", ["ls_clone_p1Rangefinder_hud","ls_glasses_poncho","lsd_gar_p1ArtilleryGunner_hud","ls_glasses_scarf","ls_clone_headlampPhase1_hud","ls_clone_headlampPhase1_double_hud","ls_clone_headlampPhase1_left_hud","ls_clone_phase1_hud"]];
+    };
+    case 2: { // LS - Phase II
+        _loadoutData set ["NVGs", ["lsd_gar_standardSPC_nvg","lsd_gar_rangefinder_nvg","lsd_gar_standard_nvg","ls_cloneNVG_phase2Headlamp","ls_cloneNVG_phase2Headlamp_double","lsd_gar_p2Commander_nvg","lsd_gar_recon_nvg"]];
+        _loadoutData set ["officerUniforms", ["ls_cloneUniform_misc_commander"]];
+        _loadoutData set ["officerVests", ["ls_gar_commander_rank_vest"]];
+        _loadoutData set ["officerHats", ["ls_cloneHelmet_barc_327th_trooper"]];
+        _loadoutData set ["glasses", ["ls_clone_headlampPhase2_double_hud","ls_clone_phase2_hud","ls_glasses_poncho","ls_clone_rangefinder_hud"]];
+        _loadoutData set ["goggles", ["ls_clone_headlampPhase2_double_hud","ls_clone_phase2_hud","ls_glasses_poncho","ls_clone_rangefinder_hud"]];
+    };
+    case 3: { // LS - New Phase 2
+        _loadoutData set ["NVGs", ["ls_cloneNVG_phase2_rangefinder","ls_cloneNVG_phase2_commander"]];
+        _loadoutData set ["officerUniforms", ["ls_cloneUniform_phase1_standard_commander"]];
+        _loadoutData set ["officerVests", ["JLTS_CloneVestHolster"]];
+        _loadoutData set ["officerHats", ["ls_cloneHelmet_phase1_standard_commander"]];
+        _loadoutData set ["glasses", ["ls_glasses_headlamp_invisible_double"]];
+        _loadoutData set ["goggles", ["ls_glasses_headlamp_invisible_double"]];
+    };
+    case 4: { // 3as
+        _loadoutData set ["NVGs", ["3AS_N_CloneChip_F","3AS_N_CloneP2_Light_F","3AS_N_CloneP2_MedicalScanner_F","3AS_N_CloneP2_Visor_F","3AS_N_CloneP2_RangeFinder_F"]];
+        _loadoutData set ["officerUniforms", ["3AS_U_CloneMCTrooper_F"]];
+        _loadoutData set ["officerVests", ["3AS_V_CloneSuspenders_Double_1_F"]];
+        _loadoutData set ["officerHats", ["3AS_H_CloneP2Hybrid_F"]];
+        _loadoutData set ["glasses", ["3AS_G_RTO_1_F"]];
+        _loadoutData set ["goggles", ["3AS_G_Heavy_7_F"]];
+    };
+};
+
+
+
 //Item *set* definitions. These are added in their entirety to unit loadouts. No randomisation is applied.
 _loadoutData set ["items_medical_basic", ["BASIC"] call A3A_fnc_itemset_medicalSupplies]; //this line defines the basic medical loadout for vanilla
 _loadoutData set ["items_medical_standard", ["STANDARD"] call A3A_fnc_itemset_medicalSupplies]; //this line defines the standard medical loadout for vanilla
@@ -311,7 +351,8 @@ _sfLoadoutData set ["stormSniperUniforms", ["ls_cloneUniform_commando_mpMarksman
 _sfLoadoutData set ["stormSniperVests", ["ls_sob_commando_sniper_vest"]];
 _sfLoadoutData set ["stormSniperHats", ["ls_cloneHelmet_commando_mpMarksman"]];
 _sfLoadoutData set ["atBackpacks", ["ls_sob_commando_eod_backpack"]];
-_sfLoadoutData set ["longRangeRadios", ["ls_sob_commando_longRangeRadio"]];
+_sfLoadoutData set ["longRangeRadios", ["ls_sob_commando_eod_backpack"]];
+_sfLoadoutData set ["NVGs", ["ls_sob_commando_antenna_nvg","ls_sob_commando_visor_nvg","ls_cloneNVG_commando_visor_mpStealth"]];
 
 _sfLoadoutData set ["slRifles", [
 ["agd_weapons_DC17M_F", "", "", "", ["3AS_100Rnd_EC40_mag","3AS_AntiArmour_mag","3AS_5Rnd_EC80_mag"], [], ""]
@@ -428,6 +469,81 @@ if (_hasKND) then {
     // (_eliteLoadoutData get "machineGuns") append [["KND_MACHINE_GUN_CLASSNAME", "", "", "", [], [], ""]];
 };
 
+switch (_cloneArmorType) do {
+    case 1: { // LS - Phase 1
+        _eliteLoadoutData set ["uniforms", ["ls_gar_phase2_uniform"]];
+        _eliteLoadoutData set ["slUniforms", ["ls_cloneUniform_misc_captain"]];
+        _eliteLoadoutData set ["vests", ["ls_gar_holster_vest"]];
+        _eliteLoadoutData set ["Hvests", ["ls_gar_tacticalOfficer_vest"]];
+        _eliteLoadoutData set ["slVests", ["lsd_gar_alphaArc_vest_red"]];
+        _eliteLoadoutData set ["backpacks", ["ls_cloneBackpack_arc"]];
+        _eliteLoadoutData set ["helmets", ["ls_gar_phase1_helmet"]];
+        _eliteLoadoutData set ["slHat", ["ls_cloneHelmet_phase1_misc_captain"]];
+        _eliteLoadoutData set ["stormUniforms", ["ls_cloneUniform_misc_sergeant"]];
+        _eliteLoadoutData set ["stormVests", ["ls_gar_arc_vest"]];
+        _eliteLoadoutData set ["stormHats", ["ls_cloneHelmet_phase1_misc_sergeant"]];
+        _eliteLoadoutData set ["stormSniperUniforms", ["ls_cloneUniform_misc_lieutenant"]];
+        _eliteLoadoutData set ["stormSniperVests", ["lsd_gar_alphaArc_vest_blue"]];
+        _eliteLoadoutData set ["stormSniperHats", ["ls_cloneHelmet_phase1_misc_lieutenant"]];
+        _eliteLoadoutData set ["atBackpacks", ["ls_gar_rocket_backpack"]];
+        _eliteLoadoutData set ["longRangeRadios", ["ls_gar_mediumRadio_backpack"]];
+    };
+    case 2: { // LS - Phase II
+        _eliteLoadoutData set ["uniforms", ["ls_cloneUniform_kcompany_trooper"]];
+        _eliteLoadoutData set ["slUniforms", ["ls_cloneUniform_612th_ganch"]];
+        _eliteLoadoutData set ["vests", ["ls_gar_holster_vest","ls_gar_forceRecon_vest","ls_gar_medic_vest"]];
+        _eliteLoadoutData set ["Hvests", ["ls_gar_forceReconOfficer_vest"]];
+        _eliteLoadoutData set ["slVests", ["ls_gar_forceReconCommander_vest"]];
+        _eliteLoadoutData set ["backpacks", ["ls_cloneBackpack_arc"]];
+        _eliteLoadoutData set ["helmets", ["ls_cloneHelmet_phase2_kcompany_trooper"]];
+        _eliteLoadoutData set ["slHat", ["ls_cloneHelmet_phase2_612th_ganch"]];
+        _eliteLoadoutData set ["stormUniforms", ["ls_cloneUniform_612th_trooper"]];
+        _eliteLoadoutData set ["stormVests", ["ls_cloneVest_commander_coruscantGuard"]];
+        _eliteLoadoutData set ["stormHats", ["ls_cloneHelmet_phase2_612th_trooper"]];
+        _eliteLoadoutData set ["stormSniperUniforms", ["ls_cloneUniform_612th_trooper"]];
+        _eliteLoadoutData set ["stormSniperVests", ["ls_gar_arc_vest"]];
+        _eliteLoadoutData set ["stormSniperHats", ["ls_cloneHelmet_phase1Arf_rancor_trooper","ls_cloneHelmet_phase2Arf_rancor_trooper"]];
+        _eliteLoadoutData set ["atBackpacks", ["ls_gar_rocket_backpack"]];
+        _eliteLoadoutData set ["longRangeRadios", ["ls_gar_mediumRadio_backpack"]];
+    };
+    case 3: { // LS - New Phase 2
+        _eliteLoadoutData set ["uniforms", ["ls_cloneUniform_phase2_38th_trooper","ls_cloneUniform_phase2_38th_trooperAlt"]];
+        _eliteLoadoutData set ["slUniforms", ["ls_cloneUniform_phase2_38th_trooper","ls_cloneUniform_phase2_38th_trooperAlt"]];
+        _eliteLoadoutData set ["vests", ["ls_cloneVest_recon"]];
+        _eliteLoadoutData set ["Hvests", ["ls_vest_invisible_armorLevel5"]];
+        _eliteLoadoutData set ["slVests", ["ls_cloneVest_kama"]];
+        _eliteLoadoutData set ["backpacks", ["ls_cloneBackpack_arc"]];
+        _eliteLoadoutData set ["helmets", ["ls_cloneHelmet_phase2_38th_trooper","ls_cloneHelmet_phase2_38th_trooperAlt"]];
+        _eliteLoadoutData set ["slHat", ["ls_cloneHelmet_phase2_38th_trooperAlt"]];
+        _eliteLoadoutData set ["stormUniforms", ["ls_cloneUniform_phase2_38th_trooper","ls_cloneUniform_phase2_38th_trooperAlt"]];
+        _eliteLoadoutData set ["stormVests", ["ls_cloneVest_arc"]];
+        _eliteLoadoutData set ["stormHats", ["ls_cloneHelmet_phase2_38th_trooperAlt"]];
+        _eliteLoadoutData set ["stormSniperUniforms", ["ls_cloneUniform_scout"]];
+        _eliteLoadoutData set ["stormSniperVests", ["ls_cloneVest_scout"]];
+        _eliteLoadoutData set ["stormSniperHats", ["ls_cloneHelmet_scout"]];
+        _eliteLoadoutData set ["atBackpacks", ["ls_cloneBackpack_rocket"]];
+        _eliteLoadoutData set ["longRangeRadios", ["ls_cloneBackpack_radio"]];
+    };
+    case 4: { // 3as
+        _eliteLoadoutData set ["uniforms", ["3AS_U_CloneGMTrooper_F"]];
+        _eliteLoadoutData set ["slUniforms", ["3AS_U_CloneGMTrooper_F"]];
+        _eliteLoadoutData set ["vests", ["3AS_V_CloneGM_R_F","3AS_V_CloneGM_L_F"]];
+        _eliteLoadoutData set ["Hvests", ["3AS_V_CloneGM_R_F","3AS_V_CloneGM_L_F"]];
+        _eliteLoadoutData set ["slVests", ["3AS_V_CloneGM_R_F","3AS_V_CloneGM_L_F"]];
+        _eliteLoadoutData set ["backpacks", ["3AS_B_CloneTrooper_Radio_F"]];
+        _eliteLoadoutData set ["helmets", ["3AS_H_CloneGM_F"]];
+        _eliteLoadoutData set ["slHat", ["3AS_H_CloneGM_F"]];
+        _eliteLoadoutData set ["stormUniforms", ["3AS_U_CloneARCTrooper_F"]];
+        _eliteLoadoutData set ["stormVests", ["3AS_V_CloneARC_F"]];
+        _eliteLoadoutData set ["stormHats", ["3AS_H_CloneARC_F"]];
+        _eliteLoadoutData set ["stormSniperUniforms", ["3AS_U_CloneTrooper_F"]];
+        _eliteLoadoutData set ["stormSniperVests", ["3AS_V_CloneSergeant_1_F"]];
+        _eliteLoadoutData set ["stormSniperHats", ["3AS_H_CloneBARC_F"]];
+        _eliteLoadoutData set ["atBackpacks", ["3AS_B_CloneTrooper_Rocket_F"]];
+        _eliteLoadoutData set ["longRangeRadios", ["3AS_B_CloneTrooper_Radio_F"]];
+    };
+};
+
 /////////////////////////////////
 //    Military Loadout Data    //
 /////////////////////////////////
@@ -496,10 +612,83 @@ _militaryLoadoutData set ["sidearms", [
 ["3AS_DC17S_Dual_F", "", "", "", [], [], ""]
 ]];
 
-if (_hasKND) then {
-    // (_militaryLoadoutData get "uniforms") append ["KND_UNIFORM_CLASSNAME"];
-    // (_militaryLoadoutData get "rifles") append [["KND_RIFLE_CLASSNAME", "", "", "", [], [], ""]];
-    // (_militaryLoadoutData get "machineGuns") append [["KND_MACHINE_GUN_CLASSNAME", "", "", "", [], [], ""]];
+//////////////////////////
+//  Clone Armor Variants //
+//////////////////////////
+switch (_cloneArmorType) do {
+    case 1: { // LS - Phase 1
+        _militaryLoadoutData set ["uniforms", ["ls_gar_phase2_uniform"]];
+        _militaryLoadoutData set ["slUniforms",  ["ls_cloneUniform_misc_sergeant"]];
+        _militaryLoadoutData set ["vests", ["ls_gar_holster_vest"]];
+        _militaryLoadoutData set ["Hvests", ["ls_gar_heavy_vest"]];
+        _militaryLoadoutData set ["slVests", ["ls_gar_holster_vest"]];
+        _militaryLoadoutData set ["backpacks", ["ls_gar_medium_backpack","ls_gar_standard_backpack","ls_gar_mediumRadio_backpack","ls_gar_heavy_backpack","ls_gar_heavyMedic_backpack","ls_gar_medic_backpack"]];
+        _militaryLoadoutData set ["helmets", ["ls_gar_phase1_helmet"]];
+        _militaryLoadoutData set ["binoculars", ["ls_clone_electrobinocularsCommander_night"]];
+        _militaryLoadoutData set ["stormUniforms", ["ls_gar_phase2_uniform"]];
+        _militaryLoadoutData set ["stormVests", ["ls_gar_engineer_vest","ls_gar_grenadier_vest"]];
+        _militaryLoadoutData set ["stormHats", ["ls_sob_phase1SpecOp_helmet"]];
+        _militaryLoadoutData set ["stormSniperUniforms", ["ls_gar_phase2_uniform"]];
+        _militaryLoadoutData set ["stormSniperVests", ["ls_gar_recon_vest","ls_gar_reconSurvival_vest","ls_gar_forceRecon_vest"]];
+        _militaryLoadoutData set ["stormSniperHats", ["ls_gar_phase1Arf_helmet"]];
+        _militaryLoadoutData set ["atBackpacks", ["ls_gar_rocket_backpack"]];
+        _militaryLoadoutData set ["longRangeRadios", ["ls_gar_mediumRadio_backpack"]];
+        _militaryLoadoutData set ["slHat", ["ls_cloneHelmet_phase1_misc_sergeant"]];
+    };
+    case 2: { // LS - Phase II
+        _militaryLoadoutData set ["uniforms", ["ls_gar_phase2_uniform"]];
+        _militaryLoadoutData set ["slUniforms", ["ls_cloneUniform_kcompany_trooper"]];
+        _militaryLoadoutData set ["vests", ["ls_gar_holster_vest"]];
+        _militaryLoadoutData set ["Hvests", ["ls_gar_heavyAlt_vest","ls_gar_heavy_vest"]];
+        _militaryLoadoutData set ["slVests", ["ls_cloneVest_officer_kCompany"]];
+        _militaryLoadoutData set ["helmets", ["ls_gar_phase2_helmet"]];
+        _militaryLoadoutData set ["backpacks", ["ls_gar_medium_backpack","ls_gar_standard_backpack","ls_gar_mediumRadio_backpack","ls_gar_heavy_backpack","ls_gar_heavyMedic_backpack","ls_gar_medic_backpack"]];
+        _militaryLoadoutData set ["slHat", ["ls_cloneHelmet_phase2_kcompany_trooper"]];
+        _militaryLoadoutData set ["stormUniforms", ["ls_cloneUniform_612th_trooper"]];
+        _militaryLoadoutData set ["stormVests", ["ls_cloneVest_arc_rancor_colt"]];
+        _militaryLoadoutData set ["stormHats", ["ls_cloneHelmet_phase2_612th_trooper"]];
+        _militaryLoadoutData set ["stormSniperUniforms", ["ls_cloneUniform_kcompany_trooper"]];
+        _militaryLoadoutData set ["stormSniperVests", ["ls_cloneVest_forceReconCommander_612th_ganch"]];
+        _militaryLoadoutData set ["stormSniperHats", ["ls_gar_phase2Arf_helmet"]];
+        _militaryLoadoutData set ["atBackpacks", ["ls_gar_rocket_backpack"]];
+        _militaryLoadoutData set ["longRangeRadios", ["ls_gar_mediumRadio_backpack"]];
+    };
+    case 3: { // LS - New Phase 2
+        _militaryLoadoutData set ["uniforms", ["ls_cloneUniform_phase2_100th_trooper"]];
+        _militaryLoadoutData set ["slUniforms", ["ls_cloneUniform_phase2_100th_trooper"]];
+        _militaryLoadoutData set ["vests", ["ls_gar_holster_vest"]];
+        _militaryLoadoutData set ["Hvests", ["ls_gar_heavyAlt_vest","ls_gar_heavy_vest"]];
+        _militaryLoadoutData set ["slVests", ["ls_cloneVest_officer"]];
+        _militaryLoadoutData set ["helmets", ["ls_cloneHelmet_phase2_100th_trooper"]];
+        _militaryLoadoutData set ["backpacks", ["ls_cloneBackpack_heavy","ls_cloneBackpack_medic","ls_cloneBackpack_ammo"]];
+        _militaryLoadoutData set ["slHat", ["ls_cloneHelmet_phase2_100th_trooper"]];
+        _militaryLoadoutData set ["stormUniforms", ["ls_cloneUniform_phase2"]];
+        _militaryLoadoutData set ["stormVests", ["ls_cloneVest_arc"]];
+        _militaryLoadoutData set ["stormHats", ["ls_cloneHelmet_arc"]];
+        _militaryLoadoutData set ["stormSniperUniforms", ["ls_cloneUniform_phase2"]];
+        _militaryLoadoutData set ["stormSniperVests", ["ls_gar_holster_vest"]];
+        _militaryLoadoutData set ["stormSniperHats", ["ls_cloneHelmet_arf"]];
+        _militaryLoadoutData set ["atBackpacks", ["ls_cloneBackpack_rocket"]];
+        _militaryLoadoutData set ["longRangeRadios", ["ls_cloneBackpack_radio"]];
+    };
+    case 4: { // 3as
+        _militaryLoadoutData set ["uniforms", ["3AS_U_CloneTrooper_F"]];
+        _militaryLoadoutData set ["slUniforms", ["3AS_U_CloneTrooper_F"]];
+        _militaryLoadoutData set ["vests", ["3AS_V_CloneSuspenders_F","3AS_V_CloneSuspenders_1_F","3AS_V_CloneSuspenders_2_F","3AS_V_CloneSuspenders_3_F","3AS_V_CloneSuspenders_Double_1_F"]];
+        _militaryLoadoutData set ["Hvests", ["3AS_V_CloneHeavy_F"]];
+        _militaryLoadoutData set ["slVests", ["3AS_V_ClonePauldron_R_Suspenders_1_F"]];
+        _militaryLoadoutData set ["helmets", ["3AS_H_CloneP2_F"]];
+        _militaryLoadoutData set ["backpacks", ["3AS_B_CloneTrooper_Heavy_F"]];
+        _militaryLoadoutData set ["slHat", ["3AS_H_CloneMG_F"]];
+        _militaryLoadoutData set ["stormUniforms", ["3AS_U_CloneTrooper_F"]];
+        _militaryLoadoutData set ["stormVests", ["3AS_V_CloneSergeant_1_F"]];
+        _militaryLoadoutData set ["stormHats", ["3AS_H_CloneP2Gunner_F"]];
+        _militaryLoadoutData set ["stormSniperUniforms", ["3AS_U_CloneARFTrooper_F"]];
+        _militaryLoadoutData set ["stormSniperVests", ["3AS_V_CloneGunner_2_F"]];
+        _militaryLoadoutData set ["stormSniperHats", ["3AS_H_CloneARF_F"]];
+        _militaryLoadoutData set ["atBackpacks", ["3AS_B_CloneTrooper_Rocket_F"]];
+        _militaryLoadoutData set ["longRangeRadios", ["3AS_B_CloneTrooper_Radio_F"]];
+    };
 };
 
 ///////////////////////////////
@@ -522,6 +711,32 @@ if (_hasKND) then {
     // (_policeLoadoutData get "uniforms") append ["KND_UNIFORM_CLASSNAME"];
 };
 
+//////////////////////////
+//  Clone Armor Variants //
+//////////////////////////
+switch (_cloneArmorType) do {
+    case 1: { // LS - Phase 1
+        _policeLoadoutData set ["uniforms", ["ls_cloneUniform_coruscantguard_thorn"]];
+        _policeLoadoutData set ["vests", ["ls_gar_holster_vest"]];
+        _policeLoadoutData set ["helmets", ["ls_cloneHelmet_phase1_coruscantguard_nco"]];
+    };
+    case 2: { // LS - Phase II
+        _policeLoadoutData set ["uniforms", ["ls_cloneUniform_coruscantguard_thorn"]];
+        _policeLoadoutData set ["vests", ["ls_gar_holster_vest"]];
+        _policeLoadoutData set ["helmets", ["ls_cloneHelmet_phase2_coruscantguard_thorn"]];
+    };
+    case 3: { // LS - New Phase 2
+        _policeLoadoutData set ["uniforms", ["ls_cloneUniform_phase2_coruscantguard_trooper"]];
+        _policeLoadoutData set ["vests", ["JLTS_CloneVestHolster"]];
+        _policeLoadoutData set ["helmets", ["ls_cloneHelmet_phase2_coruscantguard_trooper"]];
+    };
+    case 4: { // 3as
+        _policeLoadoutData set ["uniforms", ["3AS_U_CloneTrooper_CG"]];
+        _policeLoadoutData set ["vests", ["JLTS_CloneVestHolster"]];
+        _policeLoadoutData set ["helmets", ["3AS_H_CloneARF_CG","3AS_H_CloneBARC_CG","3AS_H_CloneP2_CG"]];
+    };
+};
+
 ////////////////////////////////
 //    Militia Loadout Data    //
 ////////////////////////////////
@@ -529,9 +744,9 @@ if (_hasKND) then {
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData; 
 _militiaLoadoutData set ["uniforms", ["JLTS_CloneArmor"]];
 _militiaLoadoutData set ["slUniforms", ["JLTS_CloneArmor"]];
-_militiaLoadoutData set ["vests", ["ls_imperialVest_army_tacbelt", "ls_imperialVest_army_light", "ls_imperialVest_army_light_h"]];
-_militiaLoadoutData set ["Hvests", ["ls_imperialVest_army_medium","ls_imperialVest_army_medium_h","ls_imperialVest_army"]];
-_militiaLoadoutData set ["slVests", ["ls_imperialVest_army_light"]];
+_militiaLoadoutData set ["vests", ["JLTS_CloneVestHolster"]];
+_militiaLoadoutData set ["Hvests", ["JLTS_CloneVestKama"]];
+_militiaLoadoutData set ["slVests", ["JLTS_CloneVestRecon"]];
 _militiaLoadoutData set ["backpacks", ["JLTS_Clone_belt_bag"]];
 _militiaLoadoutData set ["helmets", ["JLTS_CloneHelmetP2"]];
 _militiaLoadoutData set ["slHat", ["JLTS_CloneHelmetBARC"]];
@@ -566,11 +781,84 @@ _militiaLoadoutData set ["marksmanRifles", _marksmanRifles];
 _militiaLoadoutData set ["sniperRifles", _sniperRifles];
 _militiaLoadoutData set ["sidearms", ["3AS_pistol_DC15SA_F"]];
 
-if (_hasKND) then {
-    // (_militiaLoadoutData get "uniforms") append ["KND_UNIFORM_CLASSNAME"];
-    // (_militiaLoadoutData get "rifles") append [["KND_RIFLE_CLASSNAME", "", "", "", [], [], ""]];
-    // (_militiaLoadoutData get "machineGuns") append [["KND_MACHINE_GUN_CLASSNAME", "", "", "", [], [], ""]];
+//////////////////////////
+//  Clone Armor Variants //
+//////////////////////////
+switch (_cloneArmorType) do {
+    case 1: { // LS - Phase 1
+        _militiaLoadoutData set ["uniforms", ["ls_gar_phase2_uniform"]];
+        _militiaLoadoutData set ["slUniforms", ["ls_gar_phase2_uniform"]];
+        _militiaLoadoutData set ["vests", ["ls_gar_holster_vest"]];
+        _militiaLoadoutData set ["Hvests", ["ls_gar_heavyAlt_vest","ls_gar_heavy_vest"]];
+        _militiaLoadoutData set ["slVests", ["ls_gar_reconNCO_vest"]];
+        _militiaLoadoutData set ["helmets", ["ls_gar_phase1_helmet"]];
+        _militiaLoadoutData set ["backpacks", ["ls_gar_standard_backpack"]];
+        _militiaLoadoutData set ["slHat", ["ls_sob_phase1SpecOp_helmet"]];
+        _militiaLoadoutData set ["stormUniforms", ["ls_gar_phase2_uniform"]];
+        _militiaLoadoutData set ["stormVests", ["ls_gar_engineer_vest","ls_gar_grenadier_vest"]];
+        _militiaLoadoutData set ["stormHats", ["ls_sob_phase1SpecOp_helmet"]];
+        _militiaLoadoutData set ["stormSniperUniforms", ["ls_gar_phase2_uniform"]];
+        _militiaLoadoutData set ["stormSniperVests", ["ls_gar_recon_vest","ls_gar_reconSurvival_vest","ls_gar_forceRecon_vest"]];
+        _militiaLoadoutData set ["stormSniperHats", ["ls_gar_phase1Arf_helmet"]];
+        _militiaLoadoutData set ["atBackpacks", ["ls_gar_rocket_backpack"]];
+        _militiaLoadoutData set ["longRangeRadios", ["ls_gar_mediumRadio_backpack"]];
+    };
+    case 2: { // LS - Phase II
+        _militiaLoadoutData set ["uniforms", ["ls_gar_phase2_uniform"]];
+        _militiaLoadoutData set ["slUniforms", ["ls_gar_phase2_uniform"]];
+        _militiaLoadoutData set ["vests", ["ls_gar_holster_vest"]];
+        _militiaLoadoutData set ["Hvests", ["ls_gar_heavyAlt_vest","ls_gar_heavy_vest"]];
+        _militiaLoadoutData set ["slVests", ["ls_gar_reconNCO_vest"]];
+        _militiaLoadoutData set ["helmets", ["ls_gar_phase2_helmet"]];
+        _militiaLoadoutData set ["backpacks", ["ls_gar_standard_backpack"]];
+        _militiaLoadoutData set ["slHat", ["ls_sob_phase2SpecOp_helmet"]];
+        _militiaLoadoutData set ["stormUniforms", ["ls_gar_phase2_uniform"]];
+        _militiaLoadoutData set ["stormVests", ["ls_gar_engineer_vest","ls_gar_grenadier_vest"]];
+        _militiaLoadoutData set ["stormHats", ["ls_sob_phase2SpecOp_helmet"]];
+        _militiaLoadoutData set ["stormSniperUniforms", ["ls_gar_phase2_uniform"]];
+        _militiaLoadoutData set ["stormSniperVests", ["ls_gar_recon_vest","ls_gar_reconSurvival_vest","ls_gar_forceRecon_vest"]];
+        _militiaLoadoutData set ["stormSniperHats", ["ls_gar_phase2Arf_helmet"]];
+        _militiaLoadoutData set ["atBackpacks", ["ls_gar_rocket_backpack"]];
+        _militiaLoadoutData set ["longRangeRadios", ["ls_gar_mediumRadio_backpack"]];
+    };
+    case 3: { // LS - New Phase 2
+        _militiaLoadoutData set ["uniforms", ["ls_cloneUniform_phase2"]];
+        _militiaLoadoutData set ["slUniforms", ["ls_cloneUniform_phase2"]];
+        _militiaLoadoutData set ["vests", ["ls_gar_clone_vest"]];
+        _militiaLoadoutData set ["Hvests", ["ls_gar_clone_vest"]];
+        _militiaLoadoutData set ["slVests", ["ls_cloneVest_recon"]];
+        _militiaLoadoutData set ["helmets", ["ls_cloneHelmet_phase2"]];
+        _militiaLoadoutData set ["backpacks", ["ls_cloneBackpack_standard"]];
+        _militiaLoadoutData set ["slHat", ["ls_cloneHelmet_phase2"]];
+        _militiaLoadoutData set ["stormUniforms", ["ls_cloneUniform_phase2_100th_trooper"]];
+        _militiaLoadoutData set ["stormVests", ["ls_gar_clone_vest"]];
+        _militiaLoadoutData set ["stormHats", ["ls_cloneHelmet_phase2_100th_trooper"]];
+        _militiaLoadoutData set ["stormSniperUniforms", ["ls_cloneUniform_phase2"]];
+        _militiaLoadoutData set ["stormSniperVests", ["ls_gar_holster_vest"]];
+        _militiaLoadoutData set ["stormSniperHats", ["ls_cloneHelmet_arf"]];
+        _militiaLoadoutData set ["atBackpacks", ["ls_cloneBackpack_rocket"]];
+        _militiaLoadoutData set ["longRangeRadios", ["ls_cloneBackpack_radio"]];
+    };
+    case 4: { // 3as
+        _militiaLoadoutData set ["uniforms", ["3AS_U_CloneTrooper_F"]];
+        _militiaLoadoutData set ["slUniforms", ["3AS_U_CloneARFTrooper_F"]];
+        _militiaLoadoutData set ["vests", ["JLTS_CloneVestHolster"]];
+        _militiaLoadoutData set ["Hvests", ["3AS_V_CloneHeavy_F"]];
+        _militiaLoadoutData set ["slVests", ["3AS_V_CloneCorporal_F"]];
+        _militiaLoadoutData set ["helmets", ["3AS_H_CloneP2_F"]];
+        _militiaLoadoutData set ["backpacks", ["3AS_B_CloneTrooper_F"]];
+        _militiaLoadoutData set ["slHat", ["3AS_H_CloneRadio_F"]];
+        _militiaLoadoutData set ["stormUniforms", ["3AS_U_CloneTrooper_F"]];
+        _militiaLoadoutData set ["stormVests", ["3AS_V_CloneKama_F"]];
+        _militiaLoadoutData set ["stormHats", ["3AS_H_CloneP2Gunner_F"]];
+        _militiaLoadoutData set ["stormSniperUniforms", ["3AS_U_CloneARFTrooper_F"]];
+        _militiaLoadoutData set ["stormSniperVests", ["3AS_V_CloneGunner_2_F"]];
+        _militiaLoadoutData set ["stormSniperHats", ["3AS_H_CloneARF_F"]];
+        _militiaLoadoutData set ["atBackpacks", ["3AS_B_CloneTrooper_Rocket_F"]];
+        _militiaLoadoutData set ["longRangeRadios", ["3AS_B_CloneTrooper_Radio_F"]];
+    };
 };
+
 
 //////////////////////////
 //    Misc Loadouts     //

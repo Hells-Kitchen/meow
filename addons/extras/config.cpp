@@ -13,6 +13,7 @@ class CfgPatches
         author = AUTHOR;
         authors[] = { AUTHOR };
         authorUrl = "";
+        VERSION_CONFIG;
     };
 };
 

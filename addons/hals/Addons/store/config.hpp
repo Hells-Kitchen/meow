@@ -30,6 +30,23 @@ class cfgHALsStore
 
 	class stores 
 	{
+		class AGD_stock
+		{
+			displayName = "AGD Weaponry";
+			categories[] = {
+				"handgunsAGD",
+				"riflesAGD",
+				"sniperRiflesAGD",
+				"mgAGD",
+				"launchersAGD",
+				"specialMagazinesAGD",
+				"launcherMagazinesAGD",
+				"navigationAGD",
+				"opticsAGD",
+				"magazinesAGD",
+				"miscAGD"
+			};
+		};
 		class optre
 		{
 			categories[] = {};
@@ -37,26 +54,6 @@ class cfgHALsStore
 		class emp
 		{
 			categories[] = {};
-		};
-		class AGD_KND_stock
-		{
-			displayName = "KND Weaponry";
-			categories[] = {
-				"MandalorianBackpacksKND",
-				"handgunsKND",
-				"meleeKND",
-				"riflesKND",
-				"sniperRiflesKND",
-				"mgKND",
-				"specialKND",
-				"launchersKND",
-				"specialMagazinesKND",
-				"launcherMagazinesKND",
-				"navigationKND",
-				"opticsKND",
-				"magazinesKND",
-				"miscKND"
-			};
 		};
 	};
 };

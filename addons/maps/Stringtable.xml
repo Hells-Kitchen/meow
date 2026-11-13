@@ -8,29 +8,16 @@
     </Container>
     <Container name="mission_info">
       <Key ID="STR_A3UE_maps_Sullust_mapname_short">
-        <Original>Antistasi Sullust Extender Overwritten map</Original>
+        <Original>Antistasi Ultimate - Sullust </Original>
       </Key>
       <Key ID="STR_A3UE_maps_Sullust_mapname">
-        <Original>Antistasi - Liberation of Sullust Extender Overwritten map</Original>
+        <Original>Antistasi Ultimate - Sullust </Original>
       </Key>
       <Key ID="STR_A3UE_maps_Sullust_description">
         <Original>Fuck some shit up on a overwritten map</Original>
       </Key>
       <Key ID="STR_A3UE_maps_Sullust_loadText">
         <Original>Because nothing is more important than fun. on a overwritten map</Original>
-      </Key>
-
-      <Key ID="STR_A3UE_maps_Other_Sullust_mapname_short">
-        <Original>Antistasi Sullust Extender New map</Original>
-      </Key>
-      <Key ID="STR_A3UE_maps_Other_Sullust_mapname">
-        <Original>Antistasi - Liberation of Sullust Extender New map</Original>
-      </Key>
-      <Key ID="STR_A3UE_maps_Other_Sullust_description">
-        <Original>Fuck some shit up on a new map</Original>
-      </Key>
-      <Key ID="STR_A3UE_maps_Other_Sullust_loadText">
-        <Original>Because nothing is more important than fun. on a new map</Original>
       </Key>
     </Container>
   </Package>
